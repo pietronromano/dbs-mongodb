@@ -43,7 +43,7 @@ db.runCommand(
 ```
 
 - The result of this command returns a document describing your mongod deployment:
-```json
+```javascript
 {
    isWritablePrimary: true,
    topologyVersion: {
