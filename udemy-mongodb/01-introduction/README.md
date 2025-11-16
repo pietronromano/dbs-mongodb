@@ -1,4 +1,5 @@
 # 01: Introduction and Installation
+- Course Section: https://www.udemy.com/course/mongodb-the-complete-developers-guide/learn/lecture/13914002#overview
 
 ## Install MongoDB Community with Docker
 - Pull the MongoDB Docker Image
@@ -11,7 +12,7 @@
 ## Install VS Code extension
 - https://www.mongodb.com/docs/mongodb-vscode/
 - Open VS Code Extensions: MongoDB for VS Code v1.14.2 
-- Create a new connection:
+- In the Extension: create a new connection, use this connection string:
 mongodb://127.0.0.1:27017
   
 
@@ -103,6 +104,7 @@ Results:
 ```
 
 - Show contents of the collection:
+- NOTE: the data returned is NOT in JSON format (no quotations around fields, single quotations around string values)
 ```javascript
 db.products.find()
 
