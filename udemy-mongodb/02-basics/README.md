@@ -51,9 +51,11 @@ db.flightData.insertMany ([
 
 
 ## Delete data
+- Delete One:
 `db.flightData.deleteOne({departureAirport: "MUC"})`
 
--- See 02-passengers.json: insert many
+- See 02-passengers.json: insert many:
+```javascript
 db.passengers.insertMany(
     [
   {
@@ -62,8 +64,8 @@ db.passengers.insertMany(
   },
  
 ]
-
 )
+```
 
 - Find All: NOTE: find() returns a CURSOR, not just an array
 ```javascript
@@ -84,11 +86,11 @@ Type "it" for more
 ---
 
 ## Projection
-- Just return name, although _id gets included by default
-db.passengers.find({},{name: 1})
+- Just return name, although _id gets included by default:
+`db.passengers.find({},{name: 1})`
 
-- exclude id: exclude with 0
-db.passengers.find({},{name: 1, _id: 0})
+- exclude id: exclude with 0:
+`db.passengers.find({},{name: 1, _id: 0})`
 
 ---
 
@@ -110,9 +112,12 @@ db.hobbies.insertMany(
 )
 ```
 
+- Find:
+```javascript
 db.hobbies.find({"name": "Max"})
 db.hobbies.find({"hobbies": "Cooking"})
+```
 
 - Query an array: https://www.mongodb.com/docs/manual/tutorial/query-array-of-documents/
-- NOTE: we concatenate properties with . in a string
-db.hobbies.find({"examScores.difficulty": {$eq: 3}})
+- NOTE: we concatenate properties with "." in a string:
+`db.hobbies.find({"examScores.difficulty": {$eq: 3}})`
