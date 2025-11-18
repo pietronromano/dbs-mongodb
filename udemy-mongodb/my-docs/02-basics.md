@@ -72,7 +72,8 @@ db.passengers.insertMany(
 )
 ```
 
-- Find All: NOTE: find() returns a CURSOR, not just an array
+## Find All 
+- NOTE: find() returns a CURSOR, not just an array
 ```javascript
 db.passengers.find()
 
@@ -83,10 +84,8 @@ db.passengers.find()
   }
 ]
 Type "it" for more
-```
 
-- Force an array 
-```javascript
+//Force an array 
 db.passengers.find().toArray()
 ```
 ---
