@@ -131,3 +131,9 @@ db.products.insertOne(
     }
 )
 
+
+- Get Stats of a database:
+`db.stats()`
+
+- Drop a database:
+`db.dropDatabase()`

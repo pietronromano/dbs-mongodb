@@ -3,7 +3,7 @@
 - Shell CRUD: https://www.mongodb.com/docs/mongodb-shell/crud/
 
 ## Notes:
-- Databases and Collections are created implicitly when data is first stored, but they can be created explicitly
+- Databases and Collections are created laizly - only when data is first stored, but they can be created explicitly
 - Insert with data from 01-flights.json:
   - NOTE: _id can be supplied or will be generated if not present
   - _id values are ordered according to when they're inserted
@@ -121,3 +121,5 @@ db.hobbies.find({"hobbies": "Cooking"})
 - Query an array: https://www.mongodb.com/docs/manual/tutorial/query-array-of-documents/
 - NOTE: we concatenate properties with "." in a string:
 `db.hobbies.find({"examScores.difficulty": {$eq: 3}})`
+
+
