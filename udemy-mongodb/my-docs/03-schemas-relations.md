@@ -119,13 +119,11 @@ typeof doc.aircraft  // returns "string"
 
 # Relations
 
-- Create a publications db:
 ```javascript
+//Create a publications db:
 use publications
-```
 
-- Insert several Authors and Books:
-```javascript
+//Insert several Authors and Books:
 db.authors.insertMany(
     [
     {"author":"Author 1"},
@@ -133,7 +131,8 @@ db.authors.insertMany(
     {"author":"Author 3"}
     ]
 )
-    >insertedIds: {
+//Results
+insertedIds: {
         '0': ObjectId('691b944eef4dd0b2c955d54c'),
         '1': ObjectId('691b944eef4dd0b2c955d54d'),
         '2': ObjectId('691b944eef4dd0b2c955d54e')
@@ -146,18 +145,17 @@ db.books.insertMany(
     {"book":"Book 3"}
     ]
 )
-
 //Results
 insertedIds: {
     '0': ObjectId('691b94e1ef4dd0b2c955d54f'),
     '1': ObjectId('691b94e1ef4dd0b2c955d550'),
     '2': ObjectId('691b94e1ef4dd0b2c955d551')
 }
-```
 
-- Relate the books to the Authors
+//Relate the books to the Authors
+// (Example of saving a variable in shell)
 var author = db.authors.findOne({"_id":  ObjectId('691b944eef4dd0b2c955d54c')})
-```javascript
+
 //Relate author 1 to books 1,2
 db.authors.updateOne({_id: ObjectId('691b944eef4dd0b2c955d54c')},
         {$set: {"books" : 
@@ -185,6 +183,10 @@ db.authors.aggregate([
 - Create a collection explicitly, adding a schema (see validation.js)
 - validationAction: 'error' | warn'
 ```javascript
+//Delete a Collection (doesn't give error if it DOESN'T already exist
+db.posts.drop()
+
+//Create
 db.createCollection("posts", {  
     validationAction: 'error',
     validator: {
@@ -228,7 +230,7 @@ db.createCollection("posts", {
 })
 ```
 
-- Try adding a document that doesn't conform to the schema
+## Try adding a document that doesn't conform to the schema
 ```javascript
 db.posts.insertOne(
     {
@@ -247,7 +249,6 @@ details: {
       }
     ]
   }
-```
 
-- Delete a Collection
-db.posts.drop()
+
+```
