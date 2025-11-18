@@ -36,25 +36,30 @@ db.flightData.insertMany ([
 ```
 
 ## Finding documents
-- Find All: NOTE: find() returns a CURSOR, not just an array
-`db.flightData.find()`
+```javascript
+// Find All: NOTE: find() returns a CURSOR, not just an array
+db.flightData.find()
 
-- FindOne ({filter})
-`db.flightData.findOne({"departureAirport":"LHR"})`
+// FindOne ({filter})
+db.flightData.findOne({"departureAirport":"LHR"})
+```
 
+## Update data 
+```javascript
+//({filter}, {set})
+db.flightData.updateOne({departureAirport: "LHR"}, {$set: {"Aircraft": "Boeing 777"}})
 
-## Update data ({filter}, {set})
-`db.flightData.updateOne({departureAirport: "LHR"}, {$set: {"Aircraft": "Boeing 777"}})`
-
-- Add a field, filer with _id:
-`db.flightData.updateOne({_id: ObjectId('691a3765191c9d54d944819f')},{$set: {"delayed" : true}})`
-
+// Add a field, filer with _id:
+db.flightData.updateOne({_id: ObjectId('691a3765191c9d54d944819f')},{$set: {"delayed" : true}})
+```
 
 ## Delete data
 - Delete One:
-`db.flightData.deleteOne({departureAirport: "MUC"})`
+```javascript
+db.flightData.deleteOne({departureAirport: "MUC"})
+```
 
-- See 02-passengers.json: insert many:
+- Insert many: See 02-passengers.json:
 ```javascript
 db.passengers.insertMany(
     [
