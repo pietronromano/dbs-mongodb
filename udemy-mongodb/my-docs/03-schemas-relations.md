@@ -63,17 +63,21 @@
 ---
 
 # Examples
-- Connect with mongosh
-`mongosh --port 27017`
 
-- DBs
-`show dbs`
+## Remember Basic Commands
+```javascript 
+// Connect with mongosh
+mongosh --port 27017
 
-- Find a document:
+// Show all DBs
+show dbs
+
+// Find a document:
 db.flightData.findOne({"_id": ObjectId("691a3765191c9d54d944819f")})
 
-- Find a value:
+// Find a value:
 db.flightData.findOne({"_id": ObjectId("691a3765191c9d54d944819f")}).distance
+``` 
 
 ## Using $type to check data types
 
