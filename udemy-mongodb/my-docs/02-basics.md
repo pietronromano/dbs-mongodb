@@ -71,7 +71,7 @@ db.passengers.insertMany(
 ```javascript
 db.passengers.find()
 
-Result:
+//Result:
 ...
     name: 'Albert Twostone',
     age: 68
@@ -80,18 +80,20 @@ Result:
 Type "it" for more
 ```
 
-- Force an array
-`db.passengers.find().toArray()`
-
+- Force an array 
+```javascript
+db.passengers.find().toArray()
+```
 ---
 
 ## Projection
-- Just return name, although _id gets included by default:
-`db.passengers.find({},{name: 1})`
+```javascript
+// Just return name, although _id gets included by default:
+db.passengers.find({},{name: 1})
 
-- exclude id: exclude with 0:
-`db.passengers.find({},{name: 1, _id: 0})`
-
+// exclude id: exclude with 0:
+db.passengers.find({},{name: 1, _id: 0})
+```
 ---
 
 ## Arrays
