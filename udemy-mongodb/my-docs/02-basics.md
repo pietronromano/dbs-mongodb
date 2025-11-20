@@ -110,8 +110,9 @@ db.passengers.find({},{name: 1, _id: 0})
 ---
 
 ## Arrays
-- New  Hobbies collection: see array-data.json
+
 ```javascript
+//New Hobbies collection: see array-data.json
 db.hobbies.insertMany(
     [
   {
@@ -125,16 +126,16 @@ db.hobbies.insertMany(
     ]
     ...
 )
-```
 
-- Find:
-```javascript
+//Find:
 db.hobbies.find({"name": "Max"})
 db.hobbies.find({"hobbies": "Cooking"})
+
+// Query an array: https://www.mongodb.com/docs/manual/tutorial/query-array-of-documents/
+// NOTE: we concatenate properties with "." in a string:
+db.hobbies.find({"examScores.difficulty": {$eq: 3}})
 ```
 
-- Query an array: https://www.mongodb.com/docs/manual/tutorial/query-array-of-documents/
-- NOTE: we concatenate properties with "." in a string:
-`db.hobbies.find({"examScores.difficulty": {$eq: 3}})`
+---
 
 
