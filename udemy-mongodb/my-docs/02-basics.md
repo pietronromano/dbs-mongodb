@@ -54,12 +54,21 @@ db.flightData.updateOne({_id: ObjectId('691a3765191c9d54d944819f')},{$set: {"del
 ```
 
 ## Delete data
-- Delete One:
 ```javascript
+// Delete One:
 db.flightData.deleteOne({departureAirport: "MUC"})
+
+//Delete a Collection: doesn't give error if it DOESN'T already exist
+// The drop() method returns true if successful, false if the collection doesn't exist.
+db.flightData.drop()
+
+// Or delete the entire database
+db.dropDatabase()
+
 ```
 
-- Insert many: See 02-passengers.json:
+## Insert many
+- See 02-passengers.json:
 ```javascript
 db.passengers.insertMany(
     [

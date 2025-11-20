@@ -1,9 +1,21 @@
 # 01: Introduction and Installation
 - Course Section: https://www.udemy.com/course/mongodb-the-complete-developers-guide/learn/lecture/13914002#overview
 
+## Download and Install MongoDB Community Edition and Shell
+- https://www.mongodb.com/try/download/community
+- https://www.mongodb.com/try/download/shell
+
+
 ## Install MongoDB Community with Docker
 - Pull the MongoDB Docker Image
 `docker pull mongodb/mongodb-community-server:latest`
+
+- Execute bash inside the running container
+`docker container exec -it mongodb bash`
+
+- Check the mongod version and help command
+`mongod --version`
+`mongod --help`
 
 - Run the Image as a Container
 `docker run --name mongodb -p 27017:27017 -d mongodb/mongodb-community-server:latest`
@@ -68,7 +80,7 @@ db.runCommand(
 ```javascript
 show dbs
 
-Results: Shows 3 metadata dbs 
+//Results: Shows 3 metadata dbs 
     admin   40.00 KiB
     config  60.00 KiB
     local   40.00 KiB
@@ -82,7 +94,7 @@ Results: Shows 3 metadata dbs
 ```javascript
 use Shop
 
-Results:
+//Results:
 switched to db Shop
 Shop>
 ```
@@ -96,7 +108,7 @@ db.products.insertOne(
     }
 )
 
-Results:
+//Results:
     {
         acknowledged: true,
         insertedId: ObjectId('6919fded191c9d54d944819b')
@@ -108,7 +120,7 @@ Results:
 ```javascript
 db.products.find()
 
-Results:
+//Results:
 [
   {
     _id: ObjectId('6919fded191c9d54d944819b'),

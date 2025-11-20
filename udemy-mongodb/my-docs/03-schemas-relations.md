@@ -186,6 +186,7 @@ db.authors.aggregate([
 //Delete a Collection (doesn't give error if it DOESN'T already exist
 db.posts.drop()
 
+
 //Create
 db.createCollection("posts", {  
     validationAction: 'error',
