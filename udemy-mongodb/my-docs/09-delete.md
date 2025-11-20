@@ -19,7 +19,10 @@ db.users.deleteMany({"phone": "inactive"});
 //Delete Many Example with no filter (delete all documents in collection)
 db.users.deleteMany({});
 
-
 ```
+
+---
+
+
 
 

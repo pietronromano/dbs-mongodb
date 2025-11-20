@@ -35,6 +35,8 @@ db.flightData.insertMany ([
 ])
 ```
 
+---
+
 ## Finding documents
 ```javascript
 // Find All: NOTE: find() returns a CURSOR, not just an array
@@ -68,8 +70,9 @@ db.dropDatabase()
 ```
 
 ## Insert many
-- See 02-passengers.json:
+
 ```javascript
+//See 02-passengers.json:
 db.passengers.insertMany(
     [
   {
@@ -82,8 +85,8 @@ db.passengers.insertMany(
 ```
 
 ## Find All 
-- NOTE: find() returns a CURSOR, not just an array
 ```javascript
+//NOTE: find() returns a CURSOR, not just an array
 db.passengers.find()
 
 //Result:
