@@ -1,6 +1,6 @@
 # 09:  Update Operations 
 - Course Section: https://www.mongodb.com/docs/manual/tutorial/remove-documents/
-- mongodb-slides.pdf: pg 76-
+- mongodb-slides.pdf: pg 76-78
 
 Documentation:
 - https://www.mongodb.com/docs/manual/tutorial/update-documents/
