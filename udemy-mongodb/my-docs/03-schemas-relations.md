@@ -60,6 +60,25 @@
 | Min key | -1 | "minKey" | `MinKey` |
 | Max key | 127 | "maxKey" | `MaxKey` |
 
+## decimal128 BSON Data Type
+- decimal128 is a 128-bit decimal representation for storing very large or very precise numbers, whenever rounding decimals is important
+- Always use the constructor with a String `Decimal128("9823.1297")` - otherwise the value could be affected by the mongo shell or the driver language.
+- SEE: https://www.mongodb.com/docs/manual/reference/bson-types/#decimal128-bson-data-type
+
+The following example in the Shell/Node.js yields incorrect results:
+```js
+> 0.1
+0.1
+> 0.2
+0.2
+> 0.1 * 0.2
+0.020000000000000004
+> 0.1 + 0.1
+0.010000000000000002
+
+
+```
+
 ---
 
 # Examples
