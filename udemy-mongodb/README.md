@@ -4,3 +4,6 @@
 - Original Repo:(none, see codesnippets in downloads folder)
 
 NOTE: my-docs folder contains my notes and code snippets from the course, section-numbered accordingly. Where there is no code for a section, there is no corresponding file.
+
+TODO:
+- Checkout Azure DocumentDB: https://learn.microsoft.com/en-us/azure/documentdb/compare-mongodb-atlas
